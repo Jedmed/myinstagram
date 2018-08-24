@@ -27,4 +27,4 @@ const router = (
 )
 
 // Render to DOM
-render(router, document.getElementById('root'));
+render(router, document.getElementById('main'));

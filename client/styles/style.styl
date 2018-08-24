@@ -3,13 +3,26 @@
 @import '_animations.styl'
 
 body
-  background offwhite
+  background #d6249f
+  background radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)
 
 .photo-grid
   display flex
   flex-wrap wrap
-  max-width 1200px
+  max-width 1000px
   margin 0 auto
+  .grid-photo
+    border-top-left-radius 15px
+    border-top-right-radius 15px
+    max-height 300px
+    min-height 290px
+  figcaption
+    padding-bottom 43px
+  .control-buttons
+    position absolute
+    bottom 2em
+    left 2em
+    width calc(100% - 4em)
 
 .grid-figure
   flex-basis calc(33.333% - 4rem)
@@ -17,9 +30,9 @@ body
   flex-shrink 0
   margin 0 2rem 2rem 2rem
   padding 2rem
-  border 1px solid lightgray
   background white
-  box-shadow 0 0 0 5px rgba(0,0,0,0.03);
+  border-radius 15px
+  box-shadow 0px 3px 10px rgba(0,0,0,.25)
   position relative
 
 .single-photo
@@ -42,13 +55,10 @@ body
     width 100%
     margin 0
 
-
-
 .display-box
   max-height: 342px;
   overflow: hidden;
   margin: -2em -2em 2em -2em;
-
 
 .grid-photo
   width calc(100% + 4rem)
@@ -98,7 +108,7 @@ body
   font-size 2rem
   padding 1rem
   position absolute
-  color blue
+  color #ED4956
   left 50%
   top 50%
   pointer-events none
@@ -122,11 +132,11 @@ button, .button
   padding 5px
   text-align center
   font-size 15px
-  color blue
+  color #ED4956
   transition all 0.2s
   box-sizing padding-box
   &:hover, &:focus
-    border-color blue
+    border-color #ED4956
     outline 0
 
 /*
@@ -135,8 +145,9 @@ button, .button
 .speech-bubble
   size = 1.25rem
   width size * 1.2
+  margin-right 5px
   height size
-  background blue
+  background #ED4956
   display inline-block
   border-radius 50%
   position relative
@@ -148,6 +159,6 @@ button, .button
     height: 0;
     border-style: solid;
     border-width: 0 size size 0
-    border-color: transparent blue transparent transparent
+    border-color: transparent #ED4956 transparent transparent
     top 30%
     left 0
