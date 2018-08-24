@@ -10,10 +10,10 @@ import rootReducer from './reducers/index';
 import comments from './data/commentseed';
 import posts from './data/postseed';
 
-var post;
+let post = [];
 fetch('/posts')
   .then(res => res.json())
-  .then(data => post = data)
+  .then(data => post.push(...data))
 
 var comment;
 fetch('/comments')
@@ -25,6 +25,7 @@ const defaultState = {
   posts: posts,
   comments: comments
 }
+console.log(defaultState);
 
 const store = createStore(rootReducer, defaultState);
 

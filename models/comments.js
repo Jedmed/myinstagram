@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 // User Schema
 const commentsSchema = Schema({
+  post_id: String,
   text: String,
   user: String
 });
